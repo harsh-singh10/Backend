@@ -23,5 +23,16 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 
+// import user router 
+import userRouter from './routes/user.router.js'
+
+// routes declearitoin
+
+app.use('/users' , userRouter)
+
+app.get('/' ,(req,res)=>{
+        res.send("i am listingi")
+} )
+
 
 export{app}
