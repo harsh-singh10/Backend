@@ -4,10 +4,10 @@ import express from "express";
 import {User} from "../models/user.model.js"
 import {uploadOnCloudinary} from "../utils/cloudinary.js"
 import {ApiResponse} from "../utils/ApiResponse.js";
+import { verifyJWT } from "../middlewares/auth.middleware.js";
 
 
-
-
+ 
 
 const generateAccessTokenAndRefreshToken = async(userId)=>{
     try {
@@ -188,7 +188,7 @@ const loginUser = asyncHandler( async(req,res)=>{
 } )
 
 
-// log out uer 
+// log out user 
 
 const logOutUser = asyncHandler( async(req, res ) =>{
 
