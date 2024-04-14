@@ -31,7 +31,7 @@ import userRouter from './routes/user.router.js'
 app.use('/users' , userRouter)
 
 app.get('/' ,(req,res)=>{
-        res.send("i am listingi")
+        res.send("Server is on")
 } )
 
 
